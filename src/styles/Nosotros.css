@@ -1,0 +1,266 @@
+/* =============================================
+   NOSOTROS.CSS
+============================================= */
+
+.nosotros-hero {
+    background: linear-gradient(150deg, #0f2044, #1e3a5f);
+    padding: 9rem 2rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nosotros-hero__title {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.nosotros-hero__sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Story section */
+.nosotros-story {
+    padding: 5.5rem 0;
+    background: #fff;
+}
+
+.nosotros-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.nosotros-story__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #e8631a;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.nosotros-story__title {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: #0f2044;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.nosotros-story__text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.nosotros-story__text strong {
+    color: #0f2044;
+    font-weight: 700;
+}
+
+.nosotros-story__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 1.5rem;
+}
+
+/* Timeline */
+.nosotros-timeline {
+    padding: 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 48px;
+    bottom: -8px;
+    width: 2px;
+    background: linear-gradient(180deg, #e8631a, transparent);
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8631a, #f97316);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.timeline-content__year {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #e8631a;
+    letter-spacing: 0.08em;
+}
+
+.timeline-content__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f2044;
+    margin: 2px 0 4px;
+}
+
+.timeline-content__text {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Strengths grid */
+.nosotros-strengths {
+    padding: 5.5rem 0;
+    background: #f8fafc;
+}
+
+.nosotros-strengths__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.strength-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.strength-card:hover {
+    border-color: #e8631a;
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(15, 32, 68, 0.1);
+}
+
+.strength-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.strength-card__val {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #e8631a;
+    line-height: 1;
+}
+
+.strength-card__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0f2044;
+    margin-top: 4px;
+}
+
+.strength-card__desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* Region map section */
+.nosotros-region {
+    padding: 5.5rem 0;
+    background: linear-gradient(150deg, #0f2044, #1e3a5f);
+}
+
+.nosotros-region__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+}
+
+.region-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.75rem;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.region-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(232, 99, 26, 0.5);
+    transform: translateY(-4px);
+}
+
+.region-card__flag {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.region-card__country {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.region-card__city {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2px;
+}
+
+.region-card__since {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #e8631a;
+    margin-top: 8px;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+    .nosotros-story__grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .nosotros-strengths__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nosotros-region__grid {
+        grid-template-columns: 1fr;
+    }
+}

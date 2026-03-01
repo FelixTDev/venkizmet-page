@@ -1,0 +1,18 @@
+/* VenKizmet — Main stylesheet entry point */
+
+/* 1. Import Tailwind v4 */
+@import "tailwindcss";
+
+/* 2. Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* 3. Import design system (global tokens, utilities, resets) */
+@import './styles/global.css';
+
+/* 4. Component-level styles */
+@import './styles/Navbar.css';
+@import './styles/Footer.css';
+@import './styles/Home.css';
+@import './styles/Servicios.css';
+@import './styles/Nosotros.css';
+@import './styles/Contacto.css';

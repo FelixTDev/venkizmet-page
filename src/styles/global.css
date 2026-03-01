@@ -1,0 +1,319 @@
+/* =============================================
+   GLOBAL.CSS — VenKizmet Design System
+   Variables, reset, typography, utilities
+============================================= */
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #1e293b;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- CSS Variables --- */
+:root {
+    --orange: #e8631a;
+    --orange-light: #f97316;
+    --orange-pale: #fff3ed;
+    --navy: #0f2044;
+    --navy-mid: #1e3a5f;
+    --navy-light: rgba(255, 255, 255, 0.08);
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-600: #64748b;
+    --gray-800: #1e293b;
+    --white: #ffffff;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+    --shadow-orange: 0 8px 30px rgba(232, 99, 26, 0.3);
+
+    --transition: all 0.25s ease;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+}
+
+/* --- Typography Utilities --- */
+.label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.label--light {
+    color: #fb923c;
+}
+
+.heading-xl {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+}
+
+.heading-lg {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+}
+
+.heading-md {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--navy);
+}
+
+.body-sm {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: var(--gray-600);
+}
+
+/* --- Orange Divider --- */
+.divider {
+    width: 48px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    border-radius: 4px;
+    margin: 0.75rem auto 0;
+}
+
+.divider--left {
+    margin: 0.75rem 0 0;
+}
+
+/* --- Section Layouts --- */
+.section {
+    padding: 5.5rem 0;
+}
+
+.section--light {
+    padding: 5.5rem 0;
+    background: var(--white);
+}
+
+.section--gray {
+    padding: 5.5rem 0;
+    background: var(--gray-50);
+}
+
+.section--dark {
+    padding: 5.5rem 0;
+    background: linear-gradient(150deg, var(--navy) 0%, var(--navy-mid) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 3.5rem;
+}
+
+.section-header p.body-sm {
+    margin-top: 0.75rem;
+}
+
+/* --- Cards --- */
+.card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--orange);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card--dark {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: var(--transition);
+}
+
+.card--dark:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(232, 99, 26, 0.4);
+    transform: translateY(-4px);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    color: #fff;
+    box-shadow: var(--shadow-orange);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(232, 99, 26, 0.45);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+}
+
+.btn--outline:hover {
+    background: var(--navy);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn--ghost:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* --- Tags (tech pills) --- */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: rgba(232, 99, 26, 0.1);
+    border: 1px solid rgba(232, 99, 26, 0.25);
+    color: var(--orange);
+}
+
+/* --- Icon Box --- */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* --- Page Entry Animation --- */
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-enter {
+    animation: pageIn 0.45s ease forwards;
+}
+
+/* --- Checklist item --- */
+.check-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* --- Animations --- */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-8px)
+    }
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: .4;
+        transform: scale(.9)
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1)
+    }
+}
