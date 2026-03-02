@@ -25,13 +25,14 @@
 .navbar__inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/*
 .navbar__logo {
     display: flex;
     align-items: center;
@@ -57,6 +58,12 @@
     letter-spacing: 0.08em;
     font-weight: 500;
     transition: color 0.2s;
+}*/
+
+.navbar__logo-img {
+    height: auto;
+    width: 220px;
+    object-fit: contain;
 }
 
 .navbar__links {

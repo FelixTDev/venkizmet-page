@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import Logo from '../images/logo.png';
 import '../styles/Navbar.css'
 
 const links = [
@@ -34,6 +35,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'navbar--scrolled' : 'navbar--transparent'}`}>
             <div className="navbar__inner">
                 {/* Logo */}
+                {/*
                 <NavLink to="/" className="navbar__logo" style={{ textDecoration: 'none' }}>
                     <svg width="36" height="34" viewBox="0 0 38 36" fill="none">
                         <polygon points="12,2 2,32 22,32" fill="#e8631a" />
@@ -47,6 +49,10 @@ export default function Navbar() {
                             APPLYING TECHNOLOGY TO BUSINESS
                         </div>
                     </div>
+                </NavLink>*/}
+
+                <NavLink to="/" className="navbar__logo">
+                  <img src={Logo} alt="VenKizmet Logo" className="navbar__logo-img" />
                 </NavLink>
 
                 {/* Desktop links */}
